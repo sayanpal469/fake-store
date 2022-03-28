@@ -1,0 +1,17 @@
+.card{
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card img{
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.card .btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
