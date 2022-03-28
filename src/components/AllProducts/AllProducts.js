@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 
-const AllProducts = ({addCount}) => {
+const AllProducts = ({addCount, deleteCount}) => {
     const [products, setProducts] = useState([])
 
     useEffect( () => {
@@ -12,7 +12,7 @@ const AllProducts = ({addCount}) => {
     return (
         <div className='row container mx-auto mt-5'>
             {
-                products.map(product => <Product key={product.id} product={product} countAdd={addCount}></Product>)
+                products.map(product => <Product key={product.id} product={product} countAdd={addCount} countDelete={deleteCount}></Product>)
             }
         </div>
     );

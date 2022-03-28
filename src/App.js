@@ -11,10 +11,18 @@ function App() {
       setCount(count + 1)
   }
 
+  const deleteCount = () => {
+    if(count > 0) {
+      setCount(count - 1)
+    } else {
+      alert('Plaze add to cart')
+    }
+  }
+
   return (
     <div className='App'>
       <Menu count={count}></Menu>
-      <AllProducts addCount={AddSetCount}></AllProducts>
+      <AllProducts addCount={AddSetCount} deleteCount={deleteCount}></AllProducts>
     </div>
   );
 }
